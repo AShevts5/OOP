@@ -3,7 +3,7 @@ using static System.Math;
 
 namespace OOP {
     class task_2 {
-        static void Main() {
+        static void Main(string[] args) {
             double Y, x, y;
             
             Console.Write("Введите x: ");
