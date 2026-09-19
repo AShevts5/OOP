@@ -1,30 +1,31 @@
 using System;
+using System.Security.Cryptography;
 using static System.Math;
 
-namespace OOP {
-    class task_2 {
-        static void Main1(string[] args) {
-            double Y, x;
+namespace OOP;
+    class task_2_1 {
+        static void Main(string[] args) {
+            double x;
             
             Console.Write("Введите x: ");
             while (!double.TryParse(Console.ReadLine(), out x))
             {
                 Console.Write("Окак, ошибочка! Введите число ещё раз: ");
-            }
+            };
 
-            Console.Write("Введите y: ");
-            while (!double.TryParse(Console.ReadLine(), out y))
-            {
-                Console.Write("Окак, ошибочка! Введите число ещё раз: ");
-            }
-
+            // дробь 1
             // числитель
-            double c = Sin(2*x) * Cos(x) - 2.4 * Log(x) - Tan(x);
+            var c1 = 2*x - Pow(3, x);
             // знаменатель
-            double z = Sin(x) * Cos(x) - (Pow(x, 2)/Abs(x));
+            var z1 = Sqrt(4*Pow(x, 2) - 3*x + 1);
 
-            Y = c/z;
-            Console.Write("Y = " + Y);
+            // дробь 2
+            // числитель
+            var c2 = Pow(3, x+1) + Pow(3, x-2) + 2;
+            var z2 = Pow(Sin(2+Pow(x, 2)), 2);
+
+            var Y = c1/z1 + c2/z2;
+
+            Console.Write($"Y = {Y}");
         }
     }
-}
