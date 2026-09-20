@@ -1,37 +1,39 @@
 using System;
 using static System.Math;
 
-namespace OOP;
-
-class task_2_4
+namespace OOP
 {
-    static void Main(string[] args)
+
+    class task_2_4
     {
-        double Y, x;
-
-        Console.Write("Введите x: ");
-        while (!double.TryParse(Console.ReadLine(), out x))
+        static void Main(string[] args)
         {
-            Console.Write("Окак, ошибочка! Введите число ещё раз: ");
-        }
+            double Y, x;
 
-        if (x <= 0)
-        {
-            Console.WriteLine("Ошибка: x должен быть больше нуля");
-            return;
-        }
+            Console.Write("Введите x: ");
+            while (!double.TryParse(Console.ReadLine(), out x))
+            {
+                Console.Write("Окак, ошибочка! Введите число ещё раз: ");
+            }
 
-        double c = Sin(2 * x) * Cos(x) - 2.4 * Log(x) - Tan(x);
-        double z = Sin(x) * Cos(x) - (Pow(x, 2) / Abs(x));
+            if (x <= 0)
+            {
+                Console.WriteLine("Ошибка: x должен быть больше нуля");
+                return;
+            }
 
-        if (z == 0)
-        {
-            Console.WriteLine("Ошибка: деление на ноль");
-        }
-        else
-        {
-            Y = c / z;
-            Console.WriteLine($"Y = {Y}"); 
+            double c = Sin(2 * x) * Cos(x) - 2.4 * Log(x) - Tan(x);
+            double z = Sin(x) * Cos(x) - (Pow(x, 2) / Abs(x));
+
+            if (z == 0)
+            {
+                Console.WriteLine("Ошибка: деление на ноль");
+            }
+            else
+            {
+                Y = c / z;
+                Console.WriteLine($"Y = {Y}"); 
+            }
         }
     }
 }
