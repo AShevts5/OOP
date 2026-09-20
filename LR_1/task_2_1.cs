@@ -1,5 +1,4 @@
 using System;
-using System.Security.Cryptography;
 using static System.Math;
 
 namespace OOP
