@@ -17,8 +17,8 @@ namespace OOP
                     Console.Write("Окак, ошибочка! Введите число ещё раз: ");
                 };
 
-                var y1 = Cos(3*PI/8 - x/4, 2);
-                y = y1 - Cos(11*PI/8 + x/4, 2)
+                var y1 = Pow(Cos(3*PI/8 - x/4), 2);
+                var y = y1 - Pow(Cos(11*PI/8 + x/4), 2);
                 Console.Write($"y = {y}");
                 break;
             }

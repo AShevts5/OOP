@@ -27,7 +27,7 @@ namespace OOP
 
                 // дробь 1
                 c1 = 2*x - Pow(3, x);
-                z1 = Sqrt(podkorennoe);
+                z1 = Sqrt(p);
 
                 // дробь 2
                 c2 = Pow(3, x+1) + Pow(3, x-2) + 2;
