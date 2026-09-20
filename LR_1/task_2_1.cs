@@ -2,7 +2,8 @@ using System;
 using System.Security.Cryptography;
 using static System.Math;
 
-namespace OOP;
+namespace OOP
+{
     class task_2_1 {
         static void Main(string[] args) {
             double x;
@@ -29,3 +30,4 @@ namespace OOP;
             Console.Write($"Y = {Y}");
         }
     }
+}
