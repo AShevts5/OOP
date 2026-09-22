@@ -8,7 +8,7 @@ namespace OOP
         static void Main(string[] args)
         {
             double sum = 0;
-            for (int i = 1; i <= 5; i++)
+            for (int i = 15; i <= 90; i++)
             {
                 sum += (i % 2 == 0) ? i*2 : 0;
             }
