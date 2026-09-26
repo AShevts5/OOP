@@ -3,34 +3,34 @@ using static System.Console;
 
 namespace OOP
 {
-    class Task3_2
+    class Task3_4
     {
         static void Main(string[] args)
         {
             double[] arr = new double[10];
-            
+
             ArrayOperations.InputArray(arr, "arr");
             ArrayOperations.PrintArray(arr, "Исходный массив:");
-        
-            double p = 1;
+
+            double sum = 0;
+            int cnt = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] % 2 != 0)
+                if (arr[i] % 2 == 0)
                 {
-                    p *= arr[i];
+                    sum += arr[i];
+                    cnt += 1;
                 }
             }
-            
+            double sr = sum / cnt;
+            WriteLine($"Ср.арифм. четных чисел: {sr}");
+
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] /= p;
+                arr[i] *= sr;
             }
 
-            WriteLine($"Произведение нечетных элементов массива = {p}");
-
             ArrayOperations.PrintArray(arr, "Преобразованный массив:");
-            
-            
         }
     }
 }

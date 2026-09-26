@@ -3,34 +3,42 @@ using static System.Console;
 
 namespace OOP
 {
-    class Task3_2
+    class Task3_10
     {
         static void Main(string[] args)
         {
             double[] arr = new double[10];
-            
+
             ArrayOperations.InputArray(arr, "arr");
             ArrayOperations.PrintArray(arr, "Исходный массив:");
-        
-            double p = 1;
+
+            double sum = 0;
+            int cnt = 0;
+
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] % 2 != 0)
+                if (arr[i] > 0 && arr[i] % 2 == 0)
                 {
-                    p *= arr[i];
+                    sum += arr[i];
+                    cnt += 1;
                 }
             }
-            
-            for (int i = 0; i < arr.Length; i++)
+
+            double avg = 0;
+            if (cnt > 0)
             {
-                arr[i] /= p;
+                avg = sum / cnt;
             }
 
-            WriteLine($"Произведение нечетных элементов массива = {p}");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] *= avg;
+            }
+
+            WriteLine($"Среднее арифметическое четных положительных элементов: {avg:F3}");
+            WriteLine();
 
             ArrayOperations.PrintArray(arr, "Преобразованный массив:");
-            
-            
         }
     }
 }

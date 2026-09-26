@@ -9,27 +9,8 @@ namespace OOP
         {
             double[] arr = new double[10];
 
-            for (int i = 0; i < 10; i++)
-            {
-                Write($"Введите {i}-й элемент массива: ");
-                arr[i] = Convert.ToDouble(ReadLine());
-            }
-
-            WriteLine("Исходный массив:");
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (i == arr.Length - 1)
-                {
-                    Write($"{arr[i]}");
-                }
-                else
-                {
-                    Write($"{arr[i]}, ");
-
-                }
-            }
-            WriteLine();
-
+            ArrayOperations.InputArray(arr, "arr");
+            ArrayOperations.PrintArray(arr, "Исходный массив:");
 
             int cnt = 0;
             for (int i = 0; i < arr.Length; i++)
@@ -48,19 +29,7 @@ namespace OOP
             WriteLine($"Количество элементов, равных 5: {cnt}");
 
 
-            WriteLine("Преобразованный массив:");
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (i == arr.Length - 1)
-                {
-                    Write($"{arr[i]:F6}");
-                }
-                else
-                {
-                    Write($"{arr[i]:F6}, ");
-
-                }
-            }
+            ArrayOperations.PrintArray(arr, "Преобразованный массив: ");
             
             
         }
